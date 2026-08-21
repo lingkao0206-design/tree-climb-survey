@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>攀樹前測 · 出發前的心情</title>
+<title>上課前測 · 出發前的心情</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Noto+Sans+TC:wght@400;500;700&display=swap');
 
@@ -393,7 +393,7 @@ hr.dashed { border:none; border-top:2px dashed rgba(74,46,14,0.12); margin:14px 
 </div>
 
 <div class="height-badge" id="heightBadge">🌳 地面</div>
-<div class="mode-badge">📝 攀樹前測</div>
+<div class="mode-badge">📝 課程前測</div>
 
 <div id="ui">
   <div class="card">
@@ -403,7 +403,7 @@ hr.dashed { border:none; border-top:2px dashed rgba(74,46,14,0.12); margin:14px 
         <span style="font-size:68px;display:block;margin-bottom:10px;">🌳</span>
         <div class="start-title">出發前，先聊聊你的心情</div>
         <p class="start-sub">
-          等一下就要開始攀樹課囉！🧗<br>
+          等一下就要開始上課囉！🧗<br>
           在爬之前，先告訴老師你現在的感覺<br>
           <strong>沒有對錯，誠實回答就是最棒的答案！</strong>
         </p>
@@ -430,12 +430,12 @@ hr.dashed { border:none; border-top:2px dashed rgba(74,46,14,0.12); margin:14px 
         <span id="endEmoji" style="font-size:60px;display:block;margin-bottom:8px;">🌱</span>
         <div class="end-title" id="endTitle"></div>
         <div id="submitStatus" style="font-size:13px;font-weight:700;margin-bottom:10px;color:#A0784A;">📡 傳送中…</div>
-        <div class="teacher-tag">📋 教師專用紀錄・攀樹前測</div>
+        <div class="teacher-tag">📋 教師專用紀錄・課程前測</div>
         <div class="encourage" id="encourage"></div>
         <div class="summary" id="summaryBox"></div>
         <hr class="dashed">
         <p style="font-size:11px;color:var(--bark-light);line-height:1.7;text-align:center;">
-          準備好了，我們出發爬樹吧！🌳
+          準備好了，我們開始上課吧！🌳
         </p>
       </div>
     </div>
@@ -446,7 +446,7 @@ hr.dashed { border:none; border-top:2px dashed rgba(74,46,14,0.12); margin:14px 
 <script>
 // ========== SURVEY TYPE ==========
 const SURVEY_TYPE = 'pre';
-const SURVEY_LABEL = '攀樹前測';
+const SURVEY_LABEL = '課程前測';
 
 // ========== QUESTIONS (12 items, 3 subscales x 4) ==========
 const QS = [
@@ -845,7 +845,7 @@ function finish() {
     {label:'行為調節', prefix:'b'},
     {label:'社會技巧', prefix:'s'},
   ];
-  let html = '<h4>📋 教師紀錄摘要（攀樹前測）</h4>';
+  let html = '<h4>📋 教師紀錄摘要（課程前測）</h4>';
   cats.forEach(c => {
     html += `<div class="s-cat">${c.label}</div>`;
     QS.filter(q => q.id.startsWith(c.prefix)).forEach(q => {
