@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>攀樹後測 · 爬完之後的心情</title>
+<title>課程後測 · 爬完之後的心情</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Noto+Sans+TC:wght@400;500;700&display=swap');
 
@@ -393,7 +393,7 @@ hr.dashed { border:none; border-top:2px dashed rgba(74,46,14,0.12); margin:14px 
 </div>
 
 <div class="height-badge" id="heightBadge">🌳 地面</div>
-<div class="mode-badge">📝 攀樹後測</div>
+<div class="mode-badge">📝 課程後測</div>
 
 <div id="ui">
   <div class="card">
@@ -403,7 +403,7 @@ hr.dashed { border:none; border-top:2px dashed rgba(74,46,14,0.12); margin:14px 
         <span style="font-size:68px;display:block;margin-bottom:10px;">🌳</span>
         <div class="start-title">爬完了！聊聊今天的心情</div>
         <p class="start-sub">
-          今天的攀樹課結束囉！🌳<br>
+          今天的課程結束囉！🌳<br>
           回顧一下剛剛整堂課的感覺，告訴老師<br>
           <strong>沒有對錯，誠實回答就是最棒的答案！</strong>
         </p>
@@ -430,7 +430,7 @@ hr.dashed { border:none; border-top:2px dashed rgba(74,46,14,0.12); margin:14px 
         <span id="endEmoji" style="font-size:60px;display:block;margin-bottom:8px;">🏆</span>
         <div class="end-title" id="endTitle"></div>
         <div id="submitStatus" style="font-size:13px;font-weight:700;margin-bottom:10px;color:#A0784A;">📡 傳送中…</div>
-        <div class="teacher-tag">📋 教師專用紀錄・攀樹後測</div>
+        <div class="teacher-tag">📋 教師專用紀錄・課程後測</div>
         <div class="encourage" id="encourage"></div>
         <div class="summary" id="summaryBox"></div>
         <hr class="dashed">
@@ -446,7 +446,7 @@ hr.dashed { border:none; border-top:2px dashed rgba(74,46,14,0.12); margin:14px 
 <script>
 // ========== SURVEY TYPE ==========
 const SURVEY_TYPE = 'post';
-const SURVEY_LABEL = '攀樹後測';
+const SURVEY_LABEL = '課程後測';
 
 // ========== QUESTIONS (12 items, 3 subscales x 4) ==========
 const QS = [
@@ -826,7 +826,7 @@ function finish() {
   submitToSheet();
 
   const avg = overallAvg();
-  let emoji='🏆', title=`${name}，你完成了今天的攀樹課！`, enc='';
+  let emoji='🏆', title=`${name}，你完成了今天的課程囉！`, enc='';
 
   if (avg >= 4) {
     enc=`今天你整體感覺很不錯，做得很棒 🎉\n把這種心情記下來，下次遇到挑戰時，可以想想今天你做到的樣子。你比自己想的更有力量 💪`;
@@ -845,7 +845,7 @@ function finish() {
     {label:'行為調節', prefix:'b'},
     {label:'社會技巧', prefix:'s'},
   ];
-  let html = '<h4>📋 教師紀錄摘要（攀樹後測）</h4>';
+  let html = '<h4>📋 教師紀錄摘要（課程後測）</h4>';
   cats.forEach(c => {
     html += `<div class="s-cat">${c.label}</div>`;
     QS.filter(q => q.id.startsWith(c.prefix)).forEach(q => {
